@@ -36,9 +36,11 @@
         opacity: 0;
         transition: .3s;
     }
-
     .sec3 ul li:hover .icon img:nth-of-type(2) {
         opacity: 1;
+    }
+    .sec3 ul li:hover p {
+        font-weight: 700;
     }
 
 }
