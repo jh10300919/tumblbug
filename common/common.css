@@ -286,19 +286,28 @@ h1::after {
 
 /* sec2 시작 */
 .sec2 {
+    border: 1px solid red;
+    padding-bottom: 45vw;
 }
+
 .sec2 figure ul {
     display: flex;
 }
 
 .sec2_inner {
-    border: 3px solid red;
-
-    border: 1px solid transparent;
     width: 80vw;
     margin: auto;
-
     position: relative;
+}
+
+.sec2_inner figure {
+    width: 80vw;
+    height: 40vw;
+    position: absolute;
+    background-color: lightgray;
+    border-radius: 0 0 5px 5px;
+    margin-top: 50px;
+    padding: 5px;
 }
 
 .sec2_inner>p {
@@ -347,37 +356,85 @@ h1::after {
     transform: translateX(-100%);
 }
 
-.sec2_inner figure {
-    background-color: lightgray;
-    border-radius: 0 0 5px 5px;
-    margin-top: 50px;
-}
-
 .sec2_inner figure ul {
     background-color: white;
-    border: 1px solid blue;
+    border-radius: 3px;
     margin: 15px;
+    padding-bottom: 11.8vw;
 }
 
+.sec2_inner figure li>a {
+    color: transparent;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
 .sec2_inner figure ul li {
-    border: 1px solid red;
-    width: calc(100% / 4 - 15px);
+    border: 3px solid gold;
+    position: relative;
     margin: auto;
+    width: calc(100% / 4 - 15px);
+}
+
+.sec2_inner .more {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--main-color2);
+    border: 2px solid var(--main-color2);
+    padding: 5px 15px;
+    border-radius: 15px;
 }
 
 .sec2_inner .img {
     position: relative;
-    border: 1px solid blue;
+    border-radius: 3px;
+    width: 16vw;
+    height: 16vw;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
 }
 
 .sec2_inner .img img {
     position: absolute;
-    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sec2_inner .txt {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sec2 .t {
+    padding-bottom: 10px;
 }
 
 .sec2 .dday {
-    border: 1px solid gold;
     position: relative;
+}
+
+.sec2 .dday span {
+    color: var(--main-color2);
+}
+
+.sec2 .tt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sec2 .per {
+    color: var(--sub-color);
+    font-weight: 700;
 }
 
 .dday img {
@@ -392,6 +449,7 @@ h1::after {
 /* sec2 끝 */
 /* sec3 시작 */
 .sec3 {
+    border-top: 1px solid red;
     margin: 50px 0;
 }
 
@@ -527,6 +585,10 @@ h1::after {
 
 /* sec3 끝 */
 /* sec4 시작 */
+.sec4 {
+    margin-top: 100px;
+}
+
 .sec4 article {
     width: 80vw;
     margin: auto;
@@ -590,7 +652,20 @@ h1::after {
 .sec4_inner figure {
     display: flex;
     width: calc(100% / 2 - 50px);
+    margin-top: 50px;
+
+    position: relative;
 }
+
+.sec4_inner figure>a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    color: transparent;
+    z-index: 10;
+}
+
 .subImg {
     position: relative;
     border: 1px solid transparent;
@@ -616,9 +691,11 @@ h1::after {
     flex-direction: column;
     justify-content: center;
 }
+
 .subTxt>p {
     font-size: 1.2vw;
 }
+
 .subt {
     margin-top: 10px;
     display: flex;
@@ -637,19 +714,23 @@ h1::after {
     width: 100%;
     justify-content: flex-end;
 }
+
 .c div {
     position: relative;
     width: 15px;
 }
+
 .c div img {
     position: absolute;
     height: 100%;
 }
+
 .c p {
     font-size: 0.9vw;
     color: var(--main-color2);
     margin-left: 5px;
 }
+
 /* sec4 끝 */
 /* icon 시작 */
 .icon {
@@ -657,6 +738,7 @@ h1::after {
     justify-content: center;
     border-bottom: 1px solid var(--main-color2);
 }
+
 .icon li {
     border: 1px solid var(--main-color2);
     border-radius: 50%;
@@ -664,22 +746,25 @@ h1::after {
     margin: 50px 10px;
     position: relative;
 }
+
 .icon li a {
     position: absolute;
     width: 100%;
     height: 100%;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
 }
+
 .icon li a .fab,
 .icon li a .fas {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }
+
 /* icon 끝 */
 /* footer 시작 */
 footer ul {
@@ -687,25 +772,31 @@ footer ul {
     display: flex;
     justify-content: space-evenly;
 }
+
 footer>p {
     background-color: var(--main-color3);
     padding: 30px;
     line-height: 1.5rem;
 }
+
 footer li {
     line-height: 1.5rem;
 }
+
 footer li span {
     font-weight: bold;
 }
+
 footer .b {
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--main-color1);
 }
+
 footer li:nth-of-type(2),
 footer li:nth-of-type(3) {
     display: flex;
     flex-direction: column;
 }
+
 /* footer 끝 */
