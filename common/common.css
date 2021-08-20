@@ -29,6 +29,7 @@ a {
     --main-color1: #353535;
     --main-color2: #959595;
     --main-color3: #e4e4e4;
+    --sub-color: #FF4E4E;
     font-size: 16px;
     /* max-width: 1110px; */
     /* background: linear-gradient(to right,#FF9E9E, #FA9EFD, #A5EDFF); */
@@ -284,18 +285,23 @@ h1::after {
 }
 
 /* sec2 시작 */
+.sec2 {
+}
 .sec2 figure ul {
     display: flex;
 }
 
-.sec2 .inner {
+.sec2_inner {
+    border: 3px solid red;
+
     border: 1px solid transparent;
     width: 80vw;
     margin: auto;
+
     position: relative;
 }
 
-.sec2 .inner>p {
+.sec2_inner>p {
     border-radius: 5px 5px 0 0;
     position: absolute;
     cursor: pointer;
@@ -310,61 +316,61 @@ h1::after {
     transition: .3s;
 }
 
-.sec2 .inner>span {
+.sec2_inner>span {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     bottom: 10%;
 }
 
-.sec2 .inner>p:nth-of-type(1) {
+.sec2_inner>p:nth-of-type(1) {
     left: 0%;
 }
 
-.sec2 .inner>p:nth-of-type(2) {
+.sec2_inner>p:nth-of-type(2) {
     left: 25%;
     transform: translateX(-25%);
 }
 
-.sec2 .inner>p:nth-of-type(3) {
+.sec2_inner>p:nth-of-type(3) {
     left: 50%;
     transform: translateX(-50%);
 }
 
-.sec2 .inner>p:nth-of-type(4) {
+.sec2_inner>p:nth-of-type(4) {
     left: 75%;
     transform: translateX(-75%);
 }
 
-.sec2 .inner>p:nth-of-type(5) {
+.sec2_inner>p:nth-of-type(5) {
     left: 100%;
     transform: translateX(-100%);
 }
 
-.sec2 .inner figure {
+.sec2_inner figure {
     background-color: lightgray;
     border-radius: 0 0 5px 5px;
     margin-top: 50px;
 }
 
-.sec2 .inner figure ul {
+.sec2_inner figure ul {
     background-color: white;
     border: 1px solid blue;
     margin: 15px;
 }
 
-.sec2 .inner figure ul li {
+.sec2_inner figure ul li {
     border: 1px solid red;
     width: calc(100% / 4 - 15px);
     margin: auto;
 }
 
-.sec2 .inner .img {
+.sec2_inner .img {
     position: relative;
     border: 1px solid blue;
 }
 
-.sec2 .inner .img img {
+.sec2_inner .img img {
     position: absolute;
     width: 100%;
 }
@@ -388,17 +394,20 @@ h1::after {
 .sec3 {
     margin: 50px 0;
 }
+
 .sec3 ul {
     display: flex;
     width: 60vw;
     margin: auto;
     justify-content: space-evenly;
 }
+
 .sec3 ul li {
     text-align: center;
     padding: 10px 0;
     position: relative;
 }
+
 .sec3 ul li a {
     left: 0;
     top: 0;
@@ -420,6 +429,7 @@ h1::after {
     padding: 40px;
     position: relative;
 }
+
 .sec3 .icon img {
     position: absolute;
     width: 60%;
@@ -427,11 +437,13 @@ h1::after {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
 .sec3 ul li p {
     margin-top: 10px;
     font-weight: 100;
     transition: .3s;
 }
+
 /* ad 시작*/
 .ad {
     background: url(../img/bg.jpg) no-repeat center;
@@ -439,9 +451,11 @@ h1::after {
 
     margin-bottom: 50px;
 }
+
 .ad article {
     display: flex;
 }
+
 .left,
 .right {
     border-top: 1px solid var(--main-color2);
@@ -453,12 +467,15 @@ h1::after {
 
     position: relative;
 }
+
 .right {
     flex-direction: row-reverse;
 }
+
 .left {
     border-right: 1px solid var(--main-color2);
 }
+
 .ad a {
     position: absolute;
     left: 0;
@@ -468,12 +485,14 @@ h1::after {
     width: 100%;
     height: 100%;
 }
+
 .right div:nth-of-type(1),
 .left div:nth-of-type(1) {
     position: relative;
     width: 100%;
     height: 100%;
 }
+
 .right div img,
 .left div img {
     position: absolute;
@@ -482,67 +501,211 @@ h1::after {
     top: 50%;
     transform: translateY(-50%);
 }
+
 .right div img {
     left: 0;
 }
+
 .left .ad_txt,
 .right .ad_txt {
     white-space: nowrap;
     margin: 50px 80px;
 }
+
 .left div p:nth-of-type(1),
-.right div p:nth-of-type(1){
+.right div p:nth-of-type(1) {
     font-size: 0.8vw;
 }
+
 .left div p:nth-of-type(2),
-.right div p:nth-of-type(2){
+.right div p:nth-of-type(2) {
     margin-top: 5px;
     font-size: 1.5vw;
     letter-spacing: -0.2rem;
     font-weight: bold;
 }
+
 /* sec3 끝 */
 /* sec4 시작 */
 .sec4 article {
-    border: 1px solid red;
     width: 80vw;
     margin: auto;
+    margin-bottom: 50px;
+}
+
+.sec4 article>div {
     position: relative;
 }
+
 .smileClock {
     position: relative;
     width: 40px;
     height: 40px;
 }
+
 .smileClock img {
     position: absolute;
     width: 100%;
 }
+
 .nowTime {
     display: flex;
 }
+
 .time {
     display: flex;
     align-items: center;
     font-weight: 300;
     font-size: 1.5rem;
+    margin-left: 5px;
 }
+
 .time h3 {
     padding-left: 5px;
 }
+
 .sec4_txt {
     margin-top: 5px;
-    font-size: 1.2rem;
+    font-size: 1.5vw;
     color: var(--main-color1);
 }
+
 .sec4_more {
     position: absolute;
-    right: 0; bottom: 0;
+    right: 0;
+    bottom: 0;
     border: 2px solid var(--main-color3);
     border-radius: 15px;
     padding: 5px 10px;
     color: var(--main-color2);
 }
 
+.sec4_inner {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+.sec4_inner figure {
+    display: flex;
+    width: calc(100% / 2 - 50px);
+}
+.subImg {
+    position: relative;
+    border: 1px solid transparent;
+    overflow: hidden;
+    width: 12vw;
+    height: 12vw;
+    border-radius: 10px;
+}
+
+.subImg img {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.subTxt {
+    width: 60%;
+    height: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.subTxt>p {
+    font-size: 1.2vw;
+}
+.subt {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.subt>p {
+    color: #FF4E4E;
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+    font-size: 0.9vw;
+}
+
+.subt .c {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.c div {
+    position: relative;
+    width: 15px;
+}
+.c div img {
+    position: absolute;
+    height: 100%;
+}
+.c p {
+    font-size: 0.9vw;
+    color: var(--main-color2);
+    margin-left: 5px;
+}
 /* sec4 끝 */
+/* icon 시작 */
+.icon {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid var(--main-color2);
+}
+.icon li {
+    border: 1px solid var(--main-color2);
+    border-radius: 50%;
+    padding: 15px;
+    margin: 50px 10px;
+    position: relative;
+}
+.icon li a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+}
+.icon li a .fab,
+.icon li a .fas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+/* icon 끝 */
+/* footer 시작 */
+footer ul {
+    margin: 30px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+footer>p {
+    background-color: var(--main-color3);
+    padding: 30px;
+    line-height: 1.5rem;
+}
+footer li {
+    line-height: 1.5rem;
+}
+footer li span {
+    font-weight: bold;
+}
+footer .b {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--main-color1);
+}
+footer li:nth-of-type(2),
+footer li:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+}
+/* footer 끝 */

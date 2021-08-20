@@ -1,4 +1,5 @@
 $(() => {
+    
     //메인 슬라이드
     var swiper = new Swiper(".mySwiper", {
         slidesPerView: 1,
@@ -23,7 +24,6 @@ $(() => {
 
 
     //sec4 현재 시각
-
     let timer = setInterval(() => {
         let now = new Date();
         let hr = now.getHours();
