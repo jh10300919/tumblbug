@@ -485,8 +485,8 @@ h1::after {
 .right div img {
     left: 0;
 }
-.left .txt,
-.right .txt {
+.left .ad_txt,
+.right .ad_txt {
     white-space: nowrap;
     margin: 50px 80px;
 }
@@ -507,21 +507,42 @@ h1::after {
     border: 1px solid red;
     width: 80vw;
     margin: auto;
+    position: relative;
 }
 .smileClock {
-    border: 1px solid blue;
     position: relative;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
 }
 .smileClock img {
     position: absolute;
     width: 100%;
 }
 .nowTime {
-    border: 1px solid gold;
     display: flex;
+}
+.time {
+    display: flex;
+    align-items: center;
+    font-weight: 300;
     font-size: 1.5rem;
 }
+.time h3 {
+    padding-left: 5px;
+}
+.sec4_txt {
+    margin-top: 5px;
+    font-size: 1.2rem;
+    color: var(--main-color1);
+}
+.sec4_more {
+    position: absolute;
+    right: 0; bottom: 0;
+    border: 2px solid var(--main-color3);
+    border-radius: 15px;
+    padding: 5px 10px;
+    color: var(--main-color2);
+}
+
 
 /* sec4 끝 */
