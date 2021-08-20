@@ -41,6 +41,7 @@
     }
     .sec3 ul li:hover p {
         font-weight: 700;
+        /* color: black; */
     }
 
 }

@@ -17,4 +17,39 @@ $(() => {
             prevEl: ".swiper-button-prev",
         },
     });
+
+
+
+
+
+    //sec4 현재 시각
+
+    let timer = setInterval(() => {
+        let now = new Date();
+        let hr = now.getHours();
+        let min = now.getMinutes();
+        let sec = now.getSeconds();
+
+        if (hr >= 10) {
+            hNum = hr;
+        } else {
+            hNum = '0' + hr;
+        }
+        if (min >= 10) {
+            mNum = min;
+        } else {
+            mNum = '0' + min;
+        }
+        if (sec >= 10) {
+            sNum = sec;
+        } else {
+            sNum = '0' + sec;
+        }
+
+        $('#hNum').text(hNum);
+        $('#mNum').text(mNum);
+
+    }, 1000)
+
+
 })
