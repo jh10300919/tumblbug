@@ -147,17 +147,24 @@ nav {
 .sec1 {
     margin-top: 30px;
 }
-
 .sec1 article {
-    width: 80vw;
+    border: 1px solid red;
+    width: 60vw;
     margin: auto;
-}
 
-.sec1 .sec1_inner {
-    background-color: rgb(110, 73, 37);
     display: flex;
+    /* padding-bottom: 20vw; */
 }
-
+.mySwiper1 {
+    border: 1px solid blue;
+    width: 60%;
+    height: 100%;
+}
+.sec1 .a {
+    border: 1px solid violet;
+    width: 40%;
+    position: relative;
+}
 .sec1 figure>div {
     position: relative;
     width: 50vw;
@@ -174,14 +181,9 @@ nav {
 }
 
 .sec1 figcaption {
-    padding: 100px;
-}
-
-.sec1 figcaption * {
-    color: white;
-}
-
-.sec1 figcaption {
+    border: 1px solid red;
+    padding: 30px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -201,9 +203,6 @@ nav {
 }
 
 .sec1 figcaption .button {
-    margin-top: 30px;
-    height: 4vw;
-    width: 10vw;
     position: relative;
 
     display: flex;
@@ -215,7 +214,6 @@ nav {
     border: 1px solid white;
     border-radius: 50%;
     padding: 20px;
-    /* margin: 5vw 5vw; */
 }
 
 .sec1 .swiper-button-next:after,
@@ -225,9 +223,6 @@ nav {
 
 .swiper-pagination {
     border: 1px solid blue;
-    /* position: absolute; */
-    /* width: 100px; */
-    height: 10px;
     bottom: 0%;
     color: black;
 }
@@ -284,7 +279,7 @@ h1::after {
 
 /* sec2 시작 */
 .sec2 {
-    padding-bottom: 45vw;
+    margin-bottom: 50px;
 }
 
 .sec2 figure ul {
@@ -292,6 +287,7 @@ h1::after {
 }
 
 .sec2_inner {
+    height: 40vw;
     width: 80vw;
     margin: auto;
     position: relative;
@@ -474,19 +470,17 @@ h1::after {
 /* sec2 끝 */
 /* sec3 시작 */
 .sec3 {
-    margin: 50px 0;
-}
-
-.sec3 ul {
-    display: flex;
-    width: 60vw;
+    width: 80vw;
+    position: relative;
     margin: auto;
-    justify-content: space-evenly;
 }
-
-.sec3 ul li {
+.mySwiper2 {
+    width: 60vw;
+}
+.mySwiper2 .swiper-slide {
+    width: calc(100% / 7);
+    white-space: nowrap;
     text-align: center;
-    padding: 10px 0;
     position: relative;
 }
 
@@ -508,7 +502,9 @@ h1::after {
 .sec3 .icon {
     border: 2px solid lightgray;
     border-radius: 50%;
-    padding: 40px;
+    width: 5vw;
+    height: 5vw;
+    margin: auto;
     position: relative;
 }
 
@@ -527,11 +523,23 @@ h1::after {
 }
 
 /* ad 시작*/
+.sec3 .swiper-button-next::after,
+.sec3 .swiper-button-prev::after {
+    font-family: none;
+    color: transparent;
+    background: url(../img/prev_b.svg) no-repeat;
+
+    transition: .3s;
+}
+.sec3 .swiper-button-next::after {
+    background: url(../img/next_b.svg) no-repeat;
+}
+
 .ad {
     background: url(../img/bg.jpg) no-repeat center;
     background-size: cover;
 
-    margin-bottom: 50px;
+    margin: 100px 0 50px 0;
 }
 
 .ad article {
@@ -606,7 +614,6 @@ h1::after {
     letter-spacing: -0.2rem;
     font-weight: bold;
 }
-
 /* sec3 끝 */
 /* sec4 시작 */
 .sec4 {
@@ -787,6 +794,9 @@ h1::after {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    color: var(--main-color2);
+
+    transition: .3s;
 }
 
 /* icon 끝 */
@@ -801,6 +811,7 @@ footer>p {
     background-color: var(--main-color3);
     padding: 30px;
     line-height: 1.5rem;
+    text-align: center;
 }
 
 footer li {
