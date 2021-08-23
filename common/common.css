@@ -202,7 +202,6 @@ nav {
 
 .sec1 figcaption .button {
     margin-top: 30px;
-    border: 1px solid red;
     height: 4vw;
     width: 10vw;
     position: relative;
@@ -234,7 +233,7 @@ nav {
 }
 
 h1 {
-    margin: 50px 0;
+    margin: 100px 0 150px 0px;
     padding: 10px 0;
     font-size: 1.5vw;
     text-align: center;
@@ -244,7 +243,6 @@ h1 {
 }
 
 h1 span:nth-of-type(1) {
-    /* border: 1px solid red; */
     font-weight: bold;
     letter-spacing: -0.2rem;
 }
@@ -286,7 +284,6 @@ h1::after {
 
 /* sec2 시작 */
 .sec2 {
-    border: 1px solid red;
     padding-bottom: 45vw;
 }
 
@@ -302,12 +299,29 @@ h1::after {
 
 .sec2_inner figure {
     width: 80vw;
-    height: 40vw;
+    height: 35vw;
     position: absolute;
     background-color: lightgray;
     border-radius: 0 0 5px 5px;
     margin-top: 50px;
     padding: 5px;
+
+    display: none;
+}
+.sec2_inner figure:nth-of-type(1) { 
+    background-color: #ffc1c1;
+}
+.sec2_inner figure:nth-of-type(2) {
+    background-color: #FFE2E2;
+}
+.sec2_inner figure:nth-of-type(3) {
+    background-color: #FAE5FF;
+}
+.sec2_inner figure:nth-of-type(4) {
+    background-color: #EEF0FF;
+}
+.sec2_inner figure:nth-of-type(5) {
+    background-color: #E4FAFF;
 }
 
 .sec2_inner>p {
@@ -324,7 +338,9 @@ h1::after {
 
     transition: .3s;
 }
-
+.sec2_inner figure.on {
+    display: block;
+}
 .sec2_inner>span {
     position: absolute;
     left: 50%;
@@ -359,8 +375,8 @@ h1::after {
 .sec2_inner figure ul {
     background-color: white;
     border-radius: 3px;
-    margin: 15px;
-    padding-bottom: 11.8vw;
+    margin: 30px;
+    padding-bottom: 5vw;
 }
 
 .sec2_inner figure li>a {
@@ -371,21 +387,27 @@ h1::after {
     z-index: 10;
 }
 .sec2_inner figure ul li {
-    border: 3px solid gold;
     position: relative;
     margin: auto;
     width: calc(100% / 4 - 15px);
+    height: 25vw;
 }
 
 .sec2_inner .more {
     position: absolute;
-    bottom: 8%;
+    bottom: 15%;
     left: 50%;
     transform: translateX(-50%);
     color: var(--main-color2);
     border: 2px solid var(--main-color2);
+    background-color: white;
     padding: 5px 15px;
     border-radius: 15px;
+}
+@media (max-width:1330px) {
+    .sec2_inner .more {
+        bottom: 2.5vw;
+    }
 }
 
 .sec2_inner .img {
@@ -408,6 +430,9 @@ h1::after {
 }
 
 .sec2_inner .txt {
+    font-size: 1.1vw;
+    line-height: 1.5rem;
+    height: 20%;
     width: 80%;
     margin: auto;
     display: flex;
@@ -443,13 +468,12 @@ h1::after {
 }
 
 .dday span {
-    padding-left: 20px;
+    padding-left: 30px;
 }
 
 /* sec2 끝 */
 /* sec3 시작 */
 .sec3 {
-    border-top: 1px solid red;
     margin: 50px 0;
 }
 
