@@ -1,26 +1,38 @@
 $(() => {
 
     //메인 슬라이드
-    var swiper1 = new Swiper(".mySwiper1", {
-        slidesPerView: 1,
-        spaceBetween: 0,
+    var MainSwiper = new Swiper(".main_swiper .mySwiper1", {
         loop: true,
-        pagination: {
-            el: ".swiper-pagination",
-            type: "fraction",
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
         },
-        // autoplay: {
-        //     delay: 2500,
-        //     disableOnInteraction: false,
-        // },
+        
+    });
+
+    //서브 슬라이드
+    var SubSwiper = new Swiper(".sub_swiper .mySwiper2", {
+        loop: true,
+        effect: "fade",
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-    })
+        pagination: {
+            el: ".swiper-pagination",
+            type: "fraction",
+          },
+    });
+
+    MainSwiper.controller.control = SubSwiper;
+    SubSwiper.controller.control = MainSwiper;
 
     // sec2 탭
-    $('.sec2_inner>p').mouseenter(function(){
+    $('.sec2_inner>p').mouseenter(function () {
         $('.sec2_inner>p').removeClass('on')
         $('.sec2_inner figure').removeClass('on')
         $(this).addClass('on')
@@ -28,21 +40,21 @@ $(() => {
     })
 
     //카테고리 슬라이드
-    var swiper2 = new Swiper(".mySwiper2", {
+    var swiper3 = new Swiper(".mySwiper3", {
         slidesPerView: 7,
         spaceBetween: 30,
         slidesPerGroup: 7,
         loop: true,
         loopFillGroupWithBlank: true,
         pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+            el: ".swiper-pagination",
+            clickable: true,
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
-      });
+    });
 
     //sec4 현재 시각
     let timer = setInterval(() => {

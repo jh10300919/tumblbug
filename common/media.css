@@ -84,4 +84,15 @@
     .sec3 .icon img:nth-of-type(2) {
         display: none;
     }
+    .search,
+    .mypage {
+        display: none;
+    }
+
+    .logo {
+        border: 1px solid red;
+        justify-content: center;
+    }
+
+
 }

@@ -48,6 +48,15 @@ a {
 
 .logo {
     margin: 30px 15px 30px 0px;
+    width: 10vw;
+    position: relative;
+}
+.logo img {
+    border: 1px solid red;
+    width: 100%;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .search {
@@ -104,8 +113,9 @@ input:focus {
 }
 
 nav {
+    margin-top: 15px;
     padding: 0 20vw;
-    margin: auto;
+    
     white-space: nowrap;
     position: relative;
     z-index: 99;
@@ -142,89 +152,102 @@ nav {
 
     transition: .3s;
 }
-
+header {
+    margin: 50px 0;
+}
 /* 헤더 끝 */
-.sec1 {
-    margin-top: 30px;
-}
-.sec1 article {
-    border: 1px solid red;
-    width: 60vw;
-    margin: auto;
 
+.sec1 {
+    border: 1px solid transparent;
+    width: 80vw;
+    margin: auto;
+    
     display: flex;
-    /* padding-bottom: 20vw; */
+    justify-content: center;
 }
-.mySwiper1 {
-    border: 1px solid blue;
+.main_swiper {
     width: 60%;
-    height: 100%;
 }
-.sec1 .a {
-    border: 1px solid violet;
+.sub_swiper {
     width: 40%;
     position: relative;
 }
-.sec1 figure>div {
+.sub_swiper li {
     position: relative;
-    width: 50vw;
-    flex: 1;
-    padding-bottom: 25vw;
-
-    overflow: hidden;
+    height: 20vw;
 }
-
-.sec1 .sec1_inner>div img {
+.sub_swiper li div {
     position: absolute;
-    width: 100%;
-    bottom: 0;
+    width: 80%;
+    height: 50%;
+    
+    left: 50%; top: 30%; 
+    transform: translate(-50%,-30%);
 }
-
-.sec1 figcaption {
-    border: 1px solid red;
-    padding: 30px;
-    height: 100%;
+.sub_swiper li div {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
-    position: relative;
+    justify-content: space-around;
 }
-
-.sec1 figcaption p:nth-of-type(1) {
+.sub_swiper p:nth-of-type(1) {
     font-size: 2vw;
     letter-spacing: -0.2rem;
-
-    padding-bottom: 30px;
 }
 
-.sec1 figcaption p {
+.sub_swiper p {
     font-size: 0.8vw;
 }
 
-.sec1 figcaption .button {
+.sub_swiper .a {
+    background-color: rgb(168, 125, 100);
+}
+.sub_swiper .b {
+    background-color: #E89CB8;
+}
+.sub_swiper .c {
+    background-color: #98CED8;
+}
+.sub_swiper .d {
+    background-color: #FFE052;
+}
+.sub_swiper li p {
+    color: var(--main-color1)
+}
+.swiper-slide .mimg {
     position: relative;
-
-    display: flex;
-    justify-content: center;
+    height: 20vw;
 }
-
-.sec1 .swiper-button-next,
-.sec1 .swiper-button-prev {
-    border: 1px solid white;
-    border-radius: 50%;
-    padding: 20px;
+.swiper-slide .mimg img {
+    position: absolute;
+    width: 100%;
 }
-
+.sub_swiper {
+    border: 1px solid blue;
+}
+.sub_swiper .swiper-button-prev,
+.sub_swiper .swiper-button-next {
+    /* position: absolute; */
+}
 .sec1 .swiper-button-next:after,
 .sec1 .swiper-button-prev:after {
     font-size: 1vw;
+    color: var(--main-color1);
+    border: 1px solid var(--main-color1);
+    padding: 0.7vw 1vw;
+    border-radius: 50%;
 }
+.sec1 .swiper-button-next:after {
+}
+.sec1 .swiper-button-prev:after {
 
+}
 .swiper-pagination {
-    border: 1px solid blue;
-    bottom: 0%;
-    color: black;
+    border: 1px solid red;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.5);
+    width: 60px;
+    height: 30px;
+    left: 50%; bottom: 20%;
 }
 
 h1 {
@@ -474,10 +497,10 @@ h1::after {
     position: relative;
     margin: auto;
 }
-.mySwiper2 {
+.mySwiper3 {
     width: 60vw;
 }
-.mySwiper2 .swiper-slide {
+.mySwiper3 .swiper-slide {
     width: calc(100% / 7);
     white-space: nowrap;
     text-align: center;
