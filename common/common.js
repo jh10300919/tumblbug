@@ -7,7 +7,7 @@ $(() => {
             delay: 2500,
             disableOnInteraction: false,
         },
-        
+
     });
 
     //서브 슬라이드
@@ -25,7 +25,7 @@ $(() => {
         pagination: {
             el: ".swiper-pagination",
             type: "fraction",
-          },
+        },
     });
 
     MainSwiper.controller.control = SubSwiper;
@@ -42,7 +42,6 @@ $(() => {
     //카테고리 슬라이드
     var swiper3 = new Swiper(".mySwiper3", {
         slidesPerView: 7,
-        spaceBetween: 30,
         slidesPerGroup: 7,
         loop: true,
         loopFillGroupWithBlank: true,
@@ -50,7 +49,13 @@ $(() => {
             nextEl: ".next2",
             prevEl: ".prev2",
         },
-    });
+        breakpoints: {
+            1130: {
+                slidesPerView: 4,
+                slidesPerGroup: 4,
+            },
+        }
+    })
 
     //sec4 현재 시각
     let timer = setInterval(() => {

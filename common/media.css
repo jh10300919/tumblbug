@@ -150,7 +150,9 @@
     /* sec1 끝 */
     /* sec2 시작 */
 
-    .sec2_inner {}
+    .sec2_inner {
+        /* display: none; */
+    }
 
 
 
@@ -158,12 +160,29 @@
     /* sec2 끝 */
     /* sec3 카테고리 시작 */
 
-    .sec3 {
+    .sec3 {}
+
+    .mySwiper3 {
+        width: 90%;
         border: 1px solid red;
     }
 
+    .swiper-wrapper {
+        /* width: 100%; */
+    }
+
     .mySwiper3 .swiper-slide {
-        width: 100%;
+        border: 1px solid blue;
+    }
+
+    .sec3 .swiper-button-next::after,
+    .sec3 .swiper-button-prev::after {
+        width: 5vw;
+        bottom: 0;
+    }
+
+    .sec3 ul li p {
+        font-size: 1vw;
     }
 
 
@@ -186,7 +205,7 @@
     .left div:nth-of-type(1) {
         width: 0%;
     }
-    
+
     .left div img,
     .right div img {
         display: none;
