@@ -52,7 +52,6 @@ a {
     position: relative;
 }
 .logo img {
-    border: 1px solid red;
     width: 100%;
     position: absolute;
     left: 50%; top: 50%;
@@ -302,6 +301,7 @@ h1::after {
 
 /* sec2 시작 */
 .sec2 {
+    border: 1px solid red;
     margin-bottom: 50px;
 }
 
@@ -310,6 +310,7 @@ h1::after {
 }
 
 .sec2_inner {
+    border: 1px solid blue;
     height: 40vw;
     width: 80vw;
     margin: auto;

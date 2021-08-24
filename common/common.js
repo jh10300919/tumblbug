@@ -19,8 +19,8 @@ $(() => {
             disableOnInteraction: false,
         },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".next1",
+            prevEl: ".prev1",
         },
         pagination: {
             el: ".swiper-pagination",
@@ -46,13 +46,9 @@ $(() => {
         slidesPerGroup: 7,
         loop: true,
         loopFillGroupWithBlank: true,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".next2",
+            prevEl: ".prev2",
         },
     });
 
