@@ -100,10 +100,24 @@
 
     header {
         /* border: 1px solid red; */
+        position: relative;
+        margin: 0;
+        margin-top: 50px;
+
+    }
+    header::after {
+        cursor: pointer;
+        top: -50%;
+        left: 5%;
+        position: absolute;
+        content: "";
+        width: 15vw;
+        height: 15vw;
+        border-radius: 50%;
+        background-color: var(--main-color2);
     }
 
     .logo {
-        margin: 30px;
         width: 30%;
         left: 50%;
         transform: translateX(-50%);
@@ -183,7 +197,7 @@
     .sec2_inner figure {
         display: block;
         margin: 0;
-        margin: 50px 0;
+
     }
     .sec2_inner figure:nth-of-type(2), 
     .sec2_inner figure:nth-of-type(4) {
@@ -204,7 +218,6 @@
         top:0%
     }
     .sec2_inner figure:nth-of-type(4) {
-        border: 1px solid blue;
        bottom: 0%;
     }
     .sec2 .tt {
@@ -217,10 +230,10 @@
         left: 100%;
     }
     .sec2_inner figure ul li {
-        border: 1px solid red;
         width: calc(100% / 3);
+        border: 1px solid blue;
     }
-    
+    .next2
 
 
     /* sec2 끝 */
@@ -230,7 +243,6 @@
 
     .mySwiper3 {
         width: 90%;
-        border: 1px solid red;
     }
 
     .swiper-wrapper {
@@ -238,7 +250,6 @@
     }
 
     .mySwiper3 .swiper-slide {
-        border: 1px solid blue;
     }
 
     .sec3 .swiper-button-next::after,
