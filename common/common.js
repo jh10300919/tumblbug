@@ -32,12 +32,14 @@ $(() => {
     SubSwiper.controller.control = MainSwiper;
 
     // sec2 탭
+    
     $('.sec2_inner>p').mouseenter(function () {
         $('.sec2_inner>p').removeClass('on')
         $('.sec2_inner figure').removeClass('on')
         $(this).addClass('on')
         $(this).next().addClass('on')
     })
+
 
     //카테고리 슬라이드
     var swiper3 = new Swiper(".mySwiper3", {

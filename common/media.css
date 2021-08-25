@@ -31,7 +31,6 @@
         background-color: #E4FAFF;
     }
 
-
     /* 카테고리 */
     .sec3 .icon img:nth-of-type(2) {
         opacity: 0;
@@ -146,15 +145,82 @@
         font-size: 3vw;
         margin: 10vw 0;
     }
+    .sub_swiper .swiper-button-prev {
+        left: 40%;
+        transform: translateX(-40%);
+    }
+    .sub_swiper .swiper-button-next {
+        left: 60%;
+        transform: translateX(-60%);
+    }
+    .swiper-pagination {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10vw;
+    }
 
     /* sec1 끝 */
     /* sec2 시작 */
-
+    
     .sec2_inner {
         /* display: none; */
     }
+    
+    .sec2_inner {
+        display: flex;
+        flex-direction: column;
+        height: 100vw;
+    }
+    .sec2_inner>p {
+        border: 1px solid red;
+        width: 100%;
+        font-size: 3vw;
+        text-align: left;
+    }
+    .sec2_inner>p:nth-of-type(4) {
+        top: 50%;
+    }
+    .sec2_inner figure {
+        display: block;
+        margin: 0;
+        margin: 50px 0;
+    }
+    .sec2_inner figure:nth-of-type(2), 
+    .sec2_inner figure:nth-of-type(4) {
+        background-color: transparent;
+    }
 
+    .sec2 figure:nth-of-type(1),
+    .sec2 figure:nth-of-type(3),
+    .sec2 figure:nth-of-type(5),
+    .sec2_inner>p:nth-of-type(1),
+    .sec2_inner>p:nth-of-type(3),
+    .sec2_inner>p:nth-of-type(5) {
+        display: none;
+    }
 
+    .sec2_inner figure:nth-of-type(2) {
+        border: 1px solid red;
+        top:0%
+    }
+    .sec2_inner figure:nth-of-type(4) {
+        border: 1px solid blue;
+       bottom: 0%;
+    }
+    .sec2 .tt {
+        display: none;
+    }
+    .sec2_inner figure ul li:nth-of-type(4) {
+        display: none;
+    }
+    .sec2_inner .more {
+        left: 100%;
+    }
+    .sec2_inner figure ul li {
+        border: 1px solid red;
+        width: calc(100% / 3);
+    }
+    
 
 
     /* sec2 끝 */

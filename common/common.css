@@ -220,12 +220,15 @@ header {
     position: absolute;
     width: 100%;
 }
-.sub_swiper {
-    border: 1px solid blue;
-}
 .sub_swiper .swiper-button-prev,
 .sub_swiper .swiper-button-next {
-    /* position: absolute; */
+   top: 80%;
+}
+.sub_swiper .swiper-button-prev {
+    left: 10%;
+}
+.sub_swiper .swiper-button-next {
+    left: 20%;
 }
 .sec1 .swiper-button-next:after,
 .sec1 .swiper-button-prev:after {
@@ -236,17 +239,25 @@ header {
     border-radius: 50%;
 }
 .sec1 .swiper-button-next:after {
-}
-.sec1 .swiper-button-prev:after {
-
+    top: 0%;
 }
 .swiper-pagination {
-    border: 1px solid red;
-    border-radius: 15px;
+    /* border: 1px solid red; */
+    border-radius: 30px;
     background-color: rgba(0,0,0,0.5);
     width: 60px;
-    height: 30px;
-    left: 50%; bottom: 20%;
+    height: 15px;
+    padding: 1vw;
+    left: 30%;
+    top: 75%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.swiper-pagination span {
+    color: white;
+    padding: 5px;
 }
 
 h1 {
