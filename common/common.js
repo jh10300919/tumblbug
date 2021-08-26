@@ -1,5 +1,20 @@
 $(() => {
 
+    // 햄버거 메뉴
+    $(window).resize(function () {
+        if ($(window).width() < 1130) {
+            $('.ham').css('display', 'block')
+        } else if ($(window).width() >= 1129) {
+            $('.ham').css('display', 'none')
+        }
+    })
+
+    $('')
+
+
+
+
+
     //메인 슬라이드
     var MainSwiper = new Swiper(".main_swiper .mySwiper1", {
         loop: true,
@@ -32,7 +47,7 @@ $(() => {
     SubSwiper.controller.control = MainSwiper;
 
     // sec2 탭
-    
+
     $('.sec2_inner>p').mouseenter(function () {
         $('.sec2_inner>p').removeClass('on')
         $('.sec2_inner figure').removeClass('on')
@@ -43,8 +58,9 @@ $(() => {
 
     //카테고리 슬라이드
     var swiper3 = new Swiper(".mySwiper3", {
-        slidesPerView: 7,
-        slidesPerGroup: 7,
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        spaceBetween: 30,
         loop: true,
         loopFillGroupWithBlank: true,
         navigation: {
@@ -53,8 +69,8 @@ $(() => {
         },
         breakpoints: {
             1130: {
-                slidesPerView: 4,
-                slidesPerGroup: 4,
+                slidesPerView: 7,
+                slidesPerGroup: 7,
             },
         }
     })
@@ -87,6 +103,8 @@ $(() => {
         $('#mNum').text(mNum);
 
     }, 1000)
+
+
 
 
 })
