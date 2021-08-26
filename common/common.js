@@ -9,7 +9,14 @@ $(() => {
         }
     })
 
-    $('')
+    // 햄버거 메뉴 안 메뉴 눌렀을때...잘 안되는 부분!
+    $('.ham').click(function(){
+        $('header,.gnb,.search,.mypage,.logo').toggleClass('on')
+
+        $('.gnb>li').click(function(){
+            $(this).children('.sub').slideToggle()
+        })
+    })
 
 
 

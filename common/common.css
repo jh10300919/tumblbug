@@ -582,7 +582,6 @@ h1::after {
 }
 
 .mySwiper3 .swiper-slide {
-    width: calc(100% / 7);
     white-space: nowrap;
     text-align: center;
     position: relative;
@@ -927,6 +926,30 @@ h1::after {
     color: var(--main-color2);
 
     transition: .3s;
+}
+/* sns 아이콘 호버 */
+.icon li:nth-of-type(1):hover a .fas {
+    color: gold;
+}
+
+.icon li:nth-of-type(2):hover a .fab {
+    color: rgb(37, 113, 255);
+}
+
+.icon li:nth-of-type(3):hover a .fab {
+    color: rgb(95, 151, 255);
+}
+
+.icon li:nth-of-type(4):hover a .fab {
+    color: red;
+}
+
+.icon li:nth-of-type(5):hover a .fas {
+    color: green;
+}
+
+.icon li:nth-of-type(6):hover a .fas {
+    color: hotpink;
 }
 
 /* icon 끝 */

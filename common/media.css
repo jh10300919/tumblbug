@@ -49,33 +49,6 @@
         background-position: center;
     }
 
-
-
-    /* sns 아이콘 */
-    .icon li:nth-of-type(1):hover a .fas {
-        color: gold;
-    }
-
-    .icon li:nth-of-type(2):hover a .fab {
-        color: rgb(37, 113, 255);
-    }
-
-    .icon li:nth-of-type(3):hover a .fab {
-        color: rgb(95, 151, 255);
-    }
-
-    .icon li:nth-of-type(4):hover a .fab {
-        color: red;
-    }
-
-    .icon li:nth-of-type(5):hover a .fas {
-        color: green;
-    }
-
-    .icon li:nth-of-type(6):hover a .fas {
-        color: hotpink;
-    }
-
 }
 
 @media(max-width:1129px) {
@@ -87,18 +60,35 @@
     }
 
     header {
-        /* border: 1px solid red; */
         position: relative;
         margin: 0;
         margin-top: 50px;
-
     }
 
+    header.on {
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column;
+    }
+    .search.on,
+    .mypage.on,
+    .gnb.on {
+        display: block;
+    }
     .logo {
         width: 30%;
-        left: 50%;
-        transform: translateX(-50%);
+        height: 5vw;
     }
+    .mypage.on {
+        display: flex;
+        margin: 15px 0;
+    }
+
 
     /* sec1 시작 */
     .sec1 {
@@ -271,6 +261,7 @@
     .sec3 {
         width: 100%;
     }
+
     .mySwiper3 {
         margin: auto;
         width: 70%;
@@ -284,12 +275,13 @@
     .sec3 .swiper-button-next {
         right: 5%;
     }
+
     .sec3 .swiper-button-prev {
         left: 5%;
     }
 
     .sec3 ul li p {
-        font-size: 1vw;
+        font-size: 2vw;
     }
 
     .sec3 ul li a {
@@ -302,7 +294,15 @@
     .sec3 .swiper-slide {
         width: calc(100% / 4 - 50px)
     }
-    
+
+    .sec3 .icon {
+        border: 2px solid lightgray;
+        border-radius: 50%;
+        width: 10vw;
+        height: 10vw;
+        margin: auto;
+        position: relative;
+    }
 
     /* sec3 끝 */
 
@@ -368,12 +368,15 @@
     .subt {
         margin-top: 15px;
     }
+
     .sec4 .cl p,
     .subt>p {
         font-size: 2.5vw;
     }
 
     /* sec4 끝 */
+
+
 
     footer ul {
         display: none;
