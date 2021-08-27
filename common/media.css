@@ -4,6 +4,19 @@
     .gnb:hover .sub {
         height: 205px;
     }
+    .sub {
+        overflow: hidden;
+        background-color: white;
+        position: absolute;
+        font-size: 1.2rem;
+        width: 100%;
+    
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        height: 0px;
+        transition: .3s;
+    }
 
     /* 탭호버 색 */
     .sec2_inner>p:nth-of-type(1).on,
@@ -37,22 +50,24 @@
         font-weight: 700;
     }
 
-    .sec3 .swiper-button-next:hover::after,
-    .sec3 .swiper-button-prev:hover::after {
-        background: url(../img/prev.svg) no-repeat;
-        background-position: center;
-        transition: .3s;
-    }
-
-    .sec3 .swiper-button-next:hover::after {
-        background: url(../img/next.svg) no-repeat;
-        background-position: center;
-    }
-
 }
 
 @media(max-width:1129px) {
 
+    /* 햄버거 */
+    .ham {
+        display: block;
+    }
+    
+/* 아코디언 메뉴 */
+.sub {
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+    /*  */
     .search,
     .mypage,
     .gnb {
@@ -88,7 +103,7 @@
         display: flex;
         margin: 15px 0;
     }
-
+/* 아코디언 메뉴용 CSS */
 
     /* sec1 시작 */
     .sec1 {

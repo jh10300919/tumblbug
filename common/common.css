@@ -36,7 +36,9 @@ a {
     /* 탭 색 #FFD0D0, #FFE2E2, #FAE5FF, #EEF0FF, #E4FAFF */
 
 }
-
+body {
+    overflow-x: hidden;
+}
 
 /* 햄버거 */
 .ham {
@@ -167,23 +169,14 @@ nav {
     padding: 10px;
 }
 
-.sub {
-    overflow: hidden;
-    background-color: white;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-    height: 0px;
-    width: 100%;
-    font-size: 1.2rem;
-
-    transition: .3s;
-}
 
 header {
     margin: 50px 0;
 }
+
+/* .sub media로 이동 */
+
+
 
 /* 헤더 끝 */
 
@@ -498,7 +491,11 @@ h1::after {
     background-color: white;
     padding: 5px 15px;
     border-radius: 15px;
+
+    transition: .3s;
 }
+
+
 
 @media (max-width:1330px) {
     .sec2_inner .more {
@@ -615,8 +612,11 @@ h1::after {
     transition: .3s;
 }
 
-/* linear-gradient(to top, #adceff, #FE9BF2, #FF9697); */
-.sec3 li:hover .icon{
+/* 그라데이션 linear-gradient(to top, #adceff, #FE9BF2, #FF9697); */
+
+.sec2_inner .more:hover,
+.sec3 li:hover .icon,
+.sec4_more:hover {
     background-color: white;
     border: 2px solid transparent;
 
@@ -656,6 +656,19 @@ h1::after {
 
 .sec3 .swiper-button-next::after {
     background: url(../img/next_b.svg) no-repeat;
+    background-position: center;
+}
+
+
+.sec3 .swiper-button-next:hover::after,
+.sec3 .swiper-button-prev:hover::after {
+    background: url(../img/prev.svg) no-repeat;
+    background-position: center;
+    transition: .3s;
+}
+
+.sec3 .swiper-button-next:hover::after {
+    background: url(../img/next.svg) no-repeat;
     background-position: center;
 }
 
@@ -988,3 +1001,4 @@ footer li:nth-of-type(3) {
 }
 
 /* footer 끝 */
+
