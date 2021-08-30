@@ -1,44 +1,55 @@
 $(() => {
-
-    // 햄버거 메뉴 토글
-    $('.ham').click(function () {
-        $('header,.gnb,.search,.mypage,.logo').toggleClass('on')
-
-        $('.gnb>li').click(function () {
-            $(this).children('.sub').slideToggle()
-        })
-    })
-
     // 강사수정
     // resize 되었을 때만 실행되는 부분을 보완
     $(window).on('resize', function () {
         setResponsive();
     });
+
     $(window).on('load', function () {
         setResponsive();
     });
+
+    // 햄버거 메뉴
     function setResponsive() {
-        if ($(window).widh() < 1130) {
-
-            $('.sub').slideUp() //초기값
-
-            $('.gnb>li>a').click(function () {
-                if ($(this).parent().attr('class') != 'on') {
-                    $(this).next().slideToggle();
-                    $(".gnb>li").removeClass("on");
-                    $(this).parent().addClass("on");
-                } else {
-                    $(this).next().slideToggle();
-                    $(this).parent().removeClass("on");
-                }
-            })
-        } else if ($(window).width() >= 1129) {
-            $('.sub').off('slideToggle'); // 잘 안되는 부분 !!
+        if ($(window).width() < 1130) {
+            $('.ham').css('display', 'block')
+            $('.sub').slideUp()
+        } else if ($(window).width() >= 1131) {
+            $('.ham').css('display', 'none')
         }
     }
-    // 아코디언 메뉴. CSS 수정도 필요하다. height:0 이 아닌 display:none으로.
-    //접힌상태를 초기값으로(안하면 누르지않아도 메뉴가 다 내려와있는상태로 보임)
-    //클릭한 부모의 class가 on이 아니면 
+
+    $('.ham').click(function () {
+        $('header,.gnb,.search,.mypage,.logo').toggleClass('on')
+
+        $('html, body').animate({
+            scrollTop: 0
+        }, 0);
+        return false;
+    })
+
+
+
+    $('.top_button').click(function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 400);
+        return false;
+    });
+
+
+    // 강사수정
+    $('.gnb>li>a').click(function () {
+        if ($(this).parent().attr('class') != 'on') {
+            $('.sub').slideUp()
+            $(this).next().slideToggle();
+            $(".gnb>li").removeClass("on");
+            $(this).parent().addClass("on");
+        } else {
+            $(this).next().slideToggle();
+            $(this).parent().removeClass("on");
+        }
+    })
 
     //메인 슬라이드
     var MainSwiper = new Swiper(".main_swiper .mySwiper1", {
@@ -106,7 +117,7 @@ $(() => {
         let hr = now.getHours();
         let min = now.getMinutes();
         let sec = now.getSeconds();
-        console.log(sec);
+        // console.log(sec);
 
         if (hr >= 10) {
             hNum = hr;
@@ -128,5 +139,8 @@ $(() => {
         $('#mNum').text(mNum);
 
     }, 1000)
+
+
+
 
 })

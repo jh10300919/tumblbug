@@ -1,23 +1,16 @@
 @media(min-width:1130px) {
 
     /* 드롭 메뉴 */
-    .gnb:hover .sub {
-        height: 205px;
-    }
-    .sub {
-        overflow: hidden;
-        background-color: white;
-        position: absolute;
-        font-size: 1.2rem;
-        width: 100%;
-    
-        left: 50%;
-        transform: translateX(-50%);
-        display: block;
+    /* 강사수정 */
+    .gnb .sub {
+        display: block !important;
         height: 0px;
-        transition: .3s;
+        transition: .5s;
     }
-
+    .gnb:hover .sub {
+        height: 205px !important;
+    }
+    
     /* 탭호버 색 */
     .sec2_inner>p:nth-of-type(1).on,
     .sec2_inner>p:nth-of-type(1):hover {
@@ -54,20 +47,6 @@
 
 @media(max-width:1129px) {
 
-    /* 햄버거 */
-    .ham {
-        display: block;
-    }
-    
-/* 아코디언 메뉴 */
-.sub {
-    overflow: hidden;
-    background-color: white;
-    width: 100%;
-    font-size: 1.2rem;
-}
-
-    /*  */
     .search,
     .mypage,
     .gnb {
@@ -103,7 +82,12 @@
         display: flex;
         margin: 15px 0;
     }
-/* 아코디언 메뉴용 CSS */
+    nav {
+        margin-top: 60px;
+    }
+    .sub li a {
+        color: var(--main-color2);
+    }
 
     /* sec1 시작 */
     .sec1 {

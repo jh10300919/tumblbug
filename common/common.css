@@ -14,6 +14,10 @@
     letter-spacing: -0.1rem;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 li {
     list-style: none;
 }
@@ -36,9 +40,7 @@ a {
     /* 탭 색 #FFD0D0, #FFE2E2, #FAE5FF, #EEF0FF, #E4FAFF */
 
 }
-body {
-    overflow-x: hidden;
-}
+
 
 /* 햄버거 */
 .ham {
@@ -64,6 +66,21 @@ body {
 .ham div img {
     position: absolute;
     width: 100%;
+}
+
+.top_button {
+    border: 2px solid var(--main-color2);
+    display: inline-block;
+    padding: 20px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    background-color: white;
+    z-index: 100;
+}
+.top_button .fas {
+    color: var(--main-color2);
 }
 
 /* 헤더 시작 */
@@ -142,12 +159,12 @@ input:focus {
     display: none;
 }
 
+/* 강사수정 */
 nav {
-    margin-top: 15px;
+    width: 100%;
     padding: 0 20vw;
-
     white-space: nowrap;
-    position: relative;
+    position: absolute;
     z-index: 99;
 }
 
@@ -169,14 +186,17 @@ nav {
     padding: 10px;
 }
 
+/* 강사수정 */
+.sub {
+    overflow: hidden;
+    background-color: white;
+    width: 100%;
+    font-size: 1.2rem;
+}
 
 header {
     margin: 50px 0;
 }
-
-/* .sub media로 이동 */
-
-
 
 /* 헤더 끝 */
 
@@ -262,6 +282,7 @@ header {
 .sub_swiper .swiper-button-prev,
 .sub_swiper .swiper-button-next {
     top: 80%;
+
 }
 
 .sub_swiper .swiper-button-prev {
@@ -274,7 +295,7 @@ header {
 
 .sec1 .swiper-button-next:after,
 .sec1 .swiper-button-prev:after {
-    
+
     background: url(../img/prev0.svg) no-repeat center;
     background-size: contain;
 
@@ -291,7 +312,6 @@ header {
 }
 
 .swiper-pagination {
-    /* border: 1px solid red; */
     border-radius: 30px;
     background-color: rgba(0, 0, 0, 0.5);
     width: 60px;
@@ -491,11 +511,7 @@ h1::after {
     background-color: white;
     padding: 5px 15px;
     border-radius: 15px;
-
-    transition: .3s;
 }
-
-
 
 @media (max-width:1330px) {
     .sec2_inner .more {
@@ -583,6 +599,7 @@ h1::after {
     text-align: center;
     position: relative;
 }
+
 .sec3 .icon {
     border: 2px solid lightgray;
     border-radius: 50%;
@@ -604,32 +621,44 @@ h1::after {
 
     z-index: 10;
 }
+
 .sec3 ul li:hover .icon img:nth-of-type(2) {
     opacity: 1;
 }
+
 .sec3 .icon img:nth-of-type(2) {
     opacity: 0;
     transition: .3s;
 }
 
-/* 그라데이션 linear-gradient(to top, #adceff, #FE9BF2, #FF9697); */
-
-.sec2_inner .more:hover,
-.sec3 li:hover .icon,
-.sec4_more:hover {
+/* linear-gradient(to top, #adceff, #FE9BF2, #FF9697); */
+.more:hover,
+.sec4_more:hover,
+.sec3 li:hover .icon {
     background-color: white;
     border: 2px solid transparent;
 
-    background: linear-gradient(white,white) padding-box,
-        linear-gradient(to top, #adceff,#FE9BF2, #FF9697) border-box;
+    background: linear-gradient(white, white) padding-box,
+        linear-gradient(to top, #adceff, #FE9BF2, #FF9697) border-box;
 
 
     -moz-border-image: -moz-linear-gradient(bottom, #adceff 0%, #FE9BF2 50%, #FF9697 100%);
     -webkit-border-image: -webkit-linear-gradient(bottom, #adceff 0%, #FE9BF2 50%, #FF9697 100%);
-    border-image: linear-gradient(bottom, #adceff 0%,#FE9BF2 50%, #FF9697 100%);
+    border-image: linear-gradient(bottom, #adceff 0%, #FE9BF2 50%, #FF9697 100%);
     border-image-slice: 1;
 }
 
+.sec3 .swiper-button-next:hover::after,
+.sec3 .swiper-button-prev:hover::after {
+    background: url(../img/prev.svg) no-repeat;
+    background-position: center;
+    transition: .3s;
+}
+
+.sec3 .swiper-button-next:hover::after {
+    background: url(../img/next.svg) no-repeat;
+    background-position: center;
+}
 
 .sec3 .icon img {
     position: absolute;
@@ -644,31 +673,30 @@ h1::after {
     font-weight: 100;
     transition: .3s;
 }
+
+.sec3 .swiper-button-next,
+.sec3 .swiper-button-prev {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    margin-top: 0 !important;
+}
+
 .sec3 .swiper-button-next::after,
 .sec3 .swiper-button-prev::after {
     font-family: none;
     color: transparent;
     background: url(../img/prev_b.svg) no-repeat;
     background-position: center;
+}
 
-    transition: .3s;
+/* 강사수정 */
+.sec3 .swiper-button-next:hover::after,
+.sec3 .swiper-button-prev:hover::after {
+    /* transition:none !important; */
 }
 
 .sec3 .swiper-button-next::after {
     background: url(../img/next_b.svg) no-repeat;
-    background-position: center;
-}
-
-
-.sec3 .swiper-button-next:hover::after,
-.sec3 .swiper-button-prev:hover::after {
-    background: url(../img/prev.svg) no-repeat;
-    background-position: center;
-    transition: .3s;
-}
-
-.sec3 .swiper-button-next:hover::after {
-    background: url(../img/next.svg) no-repeat;
     background-position: center;
 }
 
@@ -940,6 +968,7 @@ h1::after {
 
     transition: .3s;
 }
+
 /* sns 아이콘 호버 */
 .icon li:nth-of-type(1):hover a .fas {
     color: gold;
@@ -1001,4 +1030,3 @@ footer li:nth-of-type(3) {
 }
 
 /* footer 끝 */
-
