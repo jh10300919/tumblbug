@@ -692,7 +692,7 @@ h1::after {
 /* 강사수정 */
 .sec3 .swiper-button-next:hover::after,
 .sec3 .swiper-button-prev:hover::after {
-    /* transition:none !important; */
+    transition:none !important;
 }
 
 .sec3 .swiper-button-next::after {
