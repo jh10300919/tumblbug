@@ -1,0 +1,390 @@
+@media(min-width:1130px) {
+
+    /* 드롭 메뉴 */
+    /* 강사수정 */
+    .gnb .sub {
+        display: block !important;
+        height: 0px;
+        transition: .5s;
+    }
+    .gnb:hover .sub {
+        height: 205px !important;
+    }
+    
+    /* 탭호버 색 */
+    .sec2_inner>p:nth-of-type(1).on,
+    .sec2_inner>p:nth-of-type(1):hover {
+        background-color: #ffc1c1;
+    }
+
+    .sec2_inner>p:nth-of-type(2).on,
+    .sec2_inner>p:nth-of-type(2):hover {
+        background-color: #FFE2E2;
+    }
+
+    .sec2_inner>p:nth-of-type(3).on,
+    .sec2_inner>p:nth-of-type(3):hover {
+        background-color: #FAE5FF;
+    }
+
+    .sec2_inner>p:nth-of-type(4).on,
+    .sec2_inner>p:nth-of-type(4):hover {
+        background-color: #EEF0FF;
+    }
+
+    .sec2_inner>p:nth-of-type(5).on,
+    .sec2_inner>p:nth-of-type(5):hover {
+        background-color: #E4FAFF;
+    }
+
+    /* 카테고리 */
+
+    .sec3 ul li:hover p {
+        font-weight: 700;
+    }
+
+}
+
+@media(max-width:1129px) {
+
+    .search,
+    .mypage,
+    .gnb {
+        display: none;
+    }
+
+    header {
+        position: relative;
+        margin: 0;
+        margin-top: 50px;
+    }
+
+    header.on {
+        width: 100%;
+        height: 100vh;
+        background-color: white;
+    }
+
+    .top {
+        display: flex;
+        flex-direction: column;
+    }
+    .search.on,
+    .mypage.on,
+    .gnb.on {
+        display: block;
+    }
+    .logo {
+        width: 30%;
+        height: 5vw;
+    }
+    .mypage.on {
+        display: flex;
+        margin: 15px 0;
+    }
+    nav {
+        margin-top: 60px;
+    }
+    .sub li a {
+        color: var(--main-color2);
+    }
+
+    /* sec1 시작 */
+    .sec1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* 섹션 1 프로젝트 설명 글자 */
+    .sec1 .a div p:nth-of-type(2),
+    .sec1 .b div p:nth-of-type(2),
+    .sec1 .c div p:nth-of-type(2),
+    .sec1 .d div p:nth-of-type(2) {
+        font-size: 2.5vw;
+    }
+
+    .sub_swiper p:nth-of-type(1) {
+        font-size: 2vw;
+        letter-spacing: -0.2rem;
+        padding-bottom: 1vw;
+    }
+
+    .swiper-pagination {
+        padding: 1.5vw;
+        top: 73%;
+    }
+
+    .main_swiper,
+    .sub_swiper {
+        width: 100%;
+    }
+
+    .main_swiper,
+    .swiper-slide .ming {
+        height: 40vw;
+    }
+
+    .swiper-container {
+        height: 100%;
+    }
+
+    .sub_swiper li div {
+        text-align: center;
+    }
+
+    .sub_swiper p:nth-of-type(1) {
+        font-size: 4vw;
+    }
+
+    .sub_swiper p {
+        font-size: 3vw;
+    }
+
+    h1 {
+        font-size: 3vw;
+        margin: 10vw 0;
+    }
+
+    .sub_swiper .swiper-button-prev {
+        left: 40%;
+        transform: translateX(-40%);
+    }
+
+    .sub_swiper .swiper-button-next {
+        left: 60%;
+        transform: translateX(-60%);
+    }
+
+    .swiper-pagination {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10vw;
+    }
+
+    /* sec1 끝 */
+    /* sec2 시작 */
+
+    .sec2_inner {
+        display: flex;
+        flex-direction: column;
+        height: 100vw;
+    }
+
+    .sec2_inner>p {
+        /* border: 1px solid red; */
+        width: 100%;
+        font-size: 3vw;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    .sec2_inner>p:nth-of-type(4) {
+        top: 50%;
+    }
+
+    .sec2_inner figure {
+        display: block;
+        margin: 0;
+    }
+
+    .sec2_inner figure:nth-of-type(2),
+    .sec2_inner figure:nth-of-type(4) {
+        background-color: transparent;
+    }
+
+    .sec2 figure:nth-of-type(1),
+    .sec2 figure:nth-of-type(3),
+    .sec2 figure:nth-of-type(5),
+    .sec2_inner>p:nth-of-type(1),
+    .sec2_inner>p:nth-of-type(3),
+    .sec2_inner>p:nth-of-type(5) {
+        display: none;
+    }
+
+    .sec2_inner figure:nth-of-type(2) {
+        top: 5%
+    }
+
+    .sec2_inner figure:nth-of-type(4) {
+        top: 55%;
+
+    }
+
+    .sec2 .tt {
+        display: none;
+    }
+
+    .sec2_inner figure ul {
+        margin: 0;
+        background-color: transparent;
+    }
+
+    .sec2_inner figure ul li:nth-of-type(4) {
+        display: none;
+    }
+
+    .sec2_inner .more {
+        left: 90%;
+        top: -4vw;
+        font-size: 3vw;
+        width: 14vw;
+        height: 5.5vw;
+        padding: 5px 0;
+        border-radius: 30px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sec2_inner .txt {
+        font-size: 2vw;
+        line-height: 3.5vw;
+    }
+
+    .sec2_inner figure ul {
+        margin-top: 5vw;
+    }
+
+    .sec2_inner figure ul li {
+        width: calc(100% / 3);
+    }
+
+    .sec2_inner .img {
+        margin-bottom: 10px;
+    }
+
+    /* sec2 끝 */
+    /* sec3 카테고리 시작 */
+
+    .sec3 {
+        width: 100%;
+    }
+
+    .mySwiper3 {
+        margin: auto;
+        width: 70%;
+    }
+
+    .sec3 .swiper-button-next::after,
+    .sec3 .swiper-button-prev::after {
+        width: 5vw;
+    }
+
+    .sec3 .swiper-button-next {
+        right: 5%;
+    }
+
+    .sec3 .swiper-button-prev {
+        left: 5%;
+    }
+
+    .sec3 ul li p {
+        font-size: 2vw;
+    }
+
+    .sec3 ul li a {
+        width: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    .sec3 .swiper-slide {
+        width: calc(100% / 4 - 50px)
+    }
+
+    .sec3 .icon {
+        border: 2px solid lightgray;
+        border-radius: 50%;
+        width: 10vw;
+        height: 10vw;
+        margin: auto;
+        position: relative;
+    }
+
+    /* sec3 끝 */
+
+    /* ad 시작 */
+
+    .left,
+    .right {
+        justify-content: center;
+    }
+
+    .right div:nth-of-type(1),
+    .left div:nth-of-type(1) {
+        width: 0%;
+    }
+
+    .left div img,
+    .right div img {
+        display: none;
+    }
+
+    .left .ad_txt,
+    .right .ad_txt {
+        text-align: center;
+        margin: 3vw;
+    }
+
+    .left div p:nth-of-type(1),
+    .right div p:nth-of-type(1) {
+        display: none;
+    }
+
+    .left div p:nth-of-type(2),
+    .right div p:nth-of-type(2) {
+        font-size: 3vw;
+        letter-spacing: -0.15rem;
+    }
+
+    /* ad 끝 */
+
+    /* sec4 시작 */
+    .sec4_txt {
+        font-size: 3vw;
+    }
+
+    .sec4_inner figure {
+        width: 100%
+    }
+
+    .subImg {
+        width: 30vw;
+        height: 30vw;
+    }
+
+    .subTxt {
+        width: 50%;
+        height: 70%;
+    }
+
+    .subTxt>p {
+        font-size: 3vw;
+    }
+
+    .subt {
+        margin-top: 15px;
+    }
+
+    .sec4 .cl p,
+    .subt>p {
+        font-size: 2.5vw;
+    }
+
+    /* sec4 끝 */
+
+
+
+    footer ul {
+        display: none;
+    }
+
+    footer>p {
+        font-size: 0.8vw;
+    }
+
+
+
+}
